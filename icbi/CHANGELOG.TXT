@@ -1,0 +1,6 @@
+1.1.000 (2008-01-30)
+	- Code cleanup.
+	- Last line interpolation bug was fixed.
+
+1.0.000 (2008-01-18)
+	- First version.

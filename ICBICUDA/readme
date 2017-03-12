@@ -1,0 +1,22 @@
+the code is a first version of ICBI in CUDA, using part of a nVidia demo to load bmp images
+it should be optimized and modified in order to change parameters from  the command line
+(now parameters are set into the code)  and to use a library for generic image handling
+
+images are enlarged approximately by 2x at each call of the cuda_ICBI
+the c example supports 2x and 4x enlargement selected with the macro FACT
+
+alpha beta gamma of ICBI and number of iterations of the iterative steps are written in variables inside
+the kernels icbiIter1 icbiIter2 created for the 2 steps.
+the number of iterations of each iterative step is fixed in the constant iter in cuda_ICBI
+(now set to 8, iterative correction is called twice with different value of the color modification, 
+meaning that for each of the two steps 16 iterations of the energy based pixel correction are actually done).
+behavior at borders should be fixed.
+
+
+usage
+icbi file.bmp
+
+output 
+ 	output.png
+
+
